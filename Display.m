@@ -22,7 +22,7 @@ function varargout = Display(varargin)
 
 % Edit the above text to modify the response to help Display
 
-% Last Modified by GUIDE v2.5 25-Sep-2016 23:58:40
+% Last Modified by GUIDE v2.5 27-Sep-2016 17:10:42
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -95,3 +95,12 @@ function heatmap_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 data = getappdata(handles.display_figure, 'data');
 showDataHeatMap(handles.axes, data);
+
+
+% --- Executes on button press in FFT.
+function FFT_Callback(hObject, eventdata, handles)
+% hObject    handle to FFT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+data = getappdata(handles.display_figure, 'data');
+showDataFFT(data);

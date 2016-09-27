@@ -1,0 +1,12 @@
+function showDataFFT(data)
+% ff = fft(data);
+% plot(ff);
+x = 1 : 0.1 : 500;
+len = length(x);
+y = cos(x);
+ff = fft(y);
+p2 = abs(ff / length(x));
+p1 = p2(1 : len / 2 + 1) / len;
+plot(x, p1);
+end
+
